@@ -1,0 +1,229 @@
+:root {
+  --felt1-num: 0;
+  --felt2-num: 0;
+  --felt3-num: 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: #f8f8f8;
+}
+
+.desktop {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+}
+
+/* Header */
+.header {
+    background-color: #f8f8f8;
+    padding: 30px 0;
+    border-bottom: 1px solid #e3e3e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header h1 {
+    font-size: 32px;
+    font-weight: 400;
+    color: #0e0d0d;
+    text-align: center;
+}
+
+/* Main Content */
+.main {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    overflow-y: auto;
+    border-top: 1px solid #e3e3e3;
+}
+
+/* User Card */
+.user-card {
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.05);
+    width: 440px;
+    min-width: 300px;
+    padding: 32px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.user-card h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+}
+
+/* Temperature Display */
+.temperature-display {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.temperature-gauge {
+    position: relative;
+    width: 300px;
+    height: 283.481px;
+}
+
+.gauge-image {
+    position: absolute;
+    top: -8.82%;
+    left: -8.33%;
+    width: 116.66%;
+    height: 116.66%;
+    opacity: 1;
+}
+
+/* Felt Temperature Visual Variable HERE */
+/* Felt Temperature Visual Variable HERE */
+/* Felt Temperature Visual Variable HERE */
+.hot1 {
+    opacity: var(--felt1-num);
+}
+
+.hot2 {
+    opacity: var(--felt2-num);
+}
+
+.hot3 {
+    opacity: var(--felt3-num);
+}
+
+
+.gauge-image:first-of-type {
+    display: block;
+}
+
+/* Felt Temperature Overlay */
+.felt-temperature {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 252px;
+    height: 252px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.circle-bg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.temperature-info {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.temperature-info .label {
+    font-size: 14px;
+    color: #7d7d7d;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.temperature-info .value {
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: #000;
+}
+
+/* Stats Section */
+.stats {
+    width: 100%;
+    border-top: 1px solid #e3e3e3;
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.stat-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #7d7d7d;
+    font-weight: 400;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    width: 69px;
+    white-space: pre-wrap;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .main {
+        padding: 30px 20px;
+    }
+
+    .user-card {
+        width: 100%;
+        max-width: 440px;
+    }
+}
+
+@media (max-width: 640px) {
+    .header h1 {
+        font-size: 24px;
+        padding: 0 20px;
+    }
+
+    .main {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .user-card {
+        padding: 24px 30px;
+        gap: 30px;
+    }
+
+    .user-card h2 {
+        font-size: 20px;
+    }
+}
