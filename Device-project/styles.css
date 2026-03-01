@@ -169,7 +169,6 @@ body {
     padding-top: 24px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     text-align: center;
 }
 
@@ -179,6 +178,8 @@ body {
     flex-direction: column;
     gap: 4px;
     align-items: center;
+    justify-content: space-between;
+    align-self: stretch;
 }
 
 .stat-label {
@@ -193,6 +194,14 @@ body {
     color: #000;
     width: 69px;
     white-space: pre-wrap;
+    position: relative;
+    bottom:12px;
+}
+
+
+.history-link {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Responsive */

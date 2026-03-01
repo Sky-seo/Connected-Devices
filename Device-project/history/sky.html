@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky - History</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="history.css">
+</head>
+<body>
+    <div class="history-container">
+        <!-- Header -->
+        <header class="history-header">
+            <a href="../index.html" class="back-link">← back</a>
+            <h1>Sky</h1>
+            <div></div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="history-main">
+            <div class="history-card">
+                <!-- Date Range -->
+                <div class="date-range">
+                    <p>Recent 7 Days</p>
+                </div>
+
+                <!-- Chart -->
+                <div class="chart-container">
+                    <canvas id="temperatureChart"></canvas>
+                </div>
+
+                <!-- Day Labels -->
+                <div class="day-labels">
+                    <span>m/d</span>
+                    <span>m/d</span>
+                    <span>m/d</span>
+                    <span>m/d</span>
+                    <span>m/d</span>
+                    <span>m/d</span>
+                    <span>m/d</span>
+                </div>
+
+                <!-- Divider -->
+                <div class="divider"></div>
+
+                <!-- Current Stats -->
+                <div class="current-stats">
+                    <div class="stats-label">Now</div>
+                    <div class="stats-values">
+                        <div class="stat">
+                            <p class="stat-label">Temperature</p>
+                            <p class="stat-value">-- °C</p>
+                        </div>
+                        <div class="stat">
+                            <p class="stat-label">Humidity</p>
+                            <p class="stat-value">-- %</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <script src="history1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>
